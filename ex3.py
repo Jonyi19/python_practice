@@ -1,3 +1,4 @@
+# import
 import random
 def get_answer(answer_number):
     if answer_number == 1:
