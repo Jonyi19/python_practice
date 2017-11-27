@@ -9,10 +9,9 @@ def collatz(number):
         print(number)
         return number
     
-print('整数を入力してください'):
+print('整数を入力してください')
 number = int(input())
-print(number)
-while true :
+while True :
     number = collatz(number)
     if number == 1 :
         break
