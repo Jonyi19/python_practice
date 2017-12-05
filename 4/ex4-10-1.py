@@ -1,13 +1,15 @@
-spam = ['apples','bananas','tofu','cats']
+#! python3
+# -*- coding: utf-8 -*-
 
-def andString(param):
-    print('\'', end='')
-    for i in range(len(param)):
-        if len(param) -1 > i:
-            print(str(param[i]) + ', ', end='')
-        else:
-            print('and ' + str(param[i]) + '\'')
+# 演習プロジェクト 4.10.1 カンマ付け
 
-andString(spam)
+def add_comma(lst):
+    if len(lst) <= 0:
+        return ''
+    if len(lst) == 1:
+        return lst[0]
+    return ', '.join(lst[:-1]) + ', and ' + lst[-1]
 
-    
+spam = ['apples', 'bananas', 'tofu', 'cats']
+s = add_comma(spam)
+print(s)
