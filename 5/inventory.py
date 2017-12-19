@@ -7,5 +7,6 @@ def display_inventory(inventory):
 
     print("アイテム総数: " + str(item_total))
 
-stuff = {'ロープ':1,'たいまつ':6,'金貨':42,'手裏剣':1,'矢':12}
-display_inventory(stuff)        
+if __name__ == '__main__':
+    stuff = {'ロープ':1,'たいまつ':6,'金貨':42,'手裏剣':1,'矢':12}
+    display_inventory(stuff)        

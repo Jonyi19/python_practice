@@ -1,11 +1,4 @@
-def display_inventory(inventory):
-    print("持ち物リスト:")
-    item_total = 0
-    for k , v in inventory.items():
-        print( str(v) + " " + str(k))
-        item_total = v + item_total
-
-    print("アイテム総数: " + str(item_total))
+from inventory import display_inventory
 
 def add_to_inventory(inventory,add_items):
     for add in add_items:
