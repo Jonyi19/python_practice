@@ -3,7 +3,7 @@ from inventory import display_inventory
 def add_to_inventory(inventory,add_items):
     for add in add_items:
         inventory.setdefault(add,0)
-        inventory[add] = inventory[add] + 1
+        inventory[add] +=  1
     return inventory
         
     
