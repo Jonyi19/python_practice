@@ -9,22 +9,21 @@ table_data = [['apples','orages','cherries','banana'],
               ['Alice','Bob','Carol','David'],
               ['dogs','cats','moose','goose']]
 
-
-def print_table(list):
+def str_size(list):
+    col_widths = [0] * len(list)
     for i in range(len(list)):
-        for l in range(len(list[i])):
-            col_widths = 
+        for t in range(len(list[i])):
+            if col_widths[i] < len(list[i][t]):
+                col_widths[i] = len(list[i][t])
+    return col_widths
 
+def print_table(list,width):
+    string = ''
+    for t in range(4):
+        for i in range(len(list)):
+            string += list[i][t].rjust(width[i],' ') + ' '
+        string += "\n"
 
+    print(string)
 
-
-
-print_table(table_data)
-
-'''    for i in range(len(list)):
-        max = 0
-        for l in range(len(i)):
-            str_len[l] = len(l)
-            if str_len[l - 1] < str_len[l]:
-                max = str_len[l]
-                '''
+print_table(table_data,str_size(table_data))
