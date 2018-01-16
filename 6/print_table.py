@@ -11,19 +11,15 @@ table_data = [['apples','orages','cherries','banana'],
 
 def str_size(list):
     col_widths = [0] * len(list)
-    for i in range(len(list)):
-        for t in range(len(list[i])):
-            if col_widths[i] < len(list[i][t]):
-                col_widths[i] = len(list[i][t])
+    for col in range(len(list)):
+        for row in list[col]:
+            col_widths[col] = max(col_widths[col],len(row))
     return col_widths
 
 def print_table(list,width):
-    string = ''
-    for t in range(4):
-        for i in range(len(list)):
-            string += list[i][t].rjust(width[i],' ') + ' '
-        string += "\n"
-
-    print(string)
+    for row in range(len(list[0])):
+        for col in range(len(list)):
+            print(list[col][row].rjust(width[col]), end=' ')
+        print()
 
 print_table(table_data,str_size(table_data))
